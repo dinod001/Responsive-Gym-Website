@@ -1,0 +1,470 @@
+*{
+    font-family:'Open Sans';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 4rem;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+}
+:root{
+    --main-color:#FB5B21;
+    --secondary-color:#edeae3;
+    --text-color:#1b1b1b;
+    --bg-color:#fff;
+
+    --box-shadow: 2px 2px 10px 14px rgb(14 55 54 / 15%);
+}
+img{
+    width: 100%; 
+    /*If the parent <div> is 500px wide, the <img> will stretch or shrink to exactly 500px wide.
+    If the container resizes (e.g., in a responsive design), the image's width will adjust
+    accordingly to fill the container.*/
+}
+body{
+    color: var(--text-color);
+}
+
+/*Header css*/
+header{
+    position: fixed;/*this will not move the nav bar*/
+    width: 100%; /*get the full width of the web page*/
+    top: 0;
+    right: 0;
+    z-index:10000;/*for the overlapping*/
+    display: flex;/*get element in same row*/
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 100px;
+    background: var(--bg-color);
+    transition: 0.5 linear;
+}
+
+.navbar{
+    display: flex;
+}
+.navbar a{
+    padding: 8px 17px;
+    color: var(--text-color);
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.navbar a:hover{
+    background-color: var(--main-color);
+    border-radius: 0.2rem;
+    transition: 0.5s all linear;/*this will add the transition for both background color and radius since i add keyword call 'all'*/
+}
+.header-icon{
+    font-size: 22px;
+    cursor: pointer;
+    display: flex;
+    column-gap: 0.8rem;
+}
+.header-icon .bx{
+    color: var(--main-color);
+}
+#menu-icon{
+    color: var(--text-color);
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+}
+.search_box{
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    transform: translate(-50%); /*The CSS property transform: translate(-50%); moves an element horizontally by 50% of its own*/
+    background: var(--bg-color);
+    width: 100%;
+}
+.search_box.active{
+    top: 110px;
+    box-shadow: var(--box-shadow);
+    transition: 0.25s all linear;
+}
+
+.search_box input{
+    outline: none;
+    border: none;
+    padding: 20px;
+    width: 100%;
+    font-size: 1rem;
+    color: var(--main-color);
+}
+
+.search_box input::placeholder{
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/*Home part*/
+section{
+    padding: 50px 100px;
+}
+.home{
+    width: 100%;
+    min-height: 100vh;
+    background: url(img/header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(17rem,auto));
+    align-items: center;
+    margin-top: 60px;
+    gap: 1.5rem;
+}
+
+.home-text h1{
+    font-size: 3.4rem;
+    color: var(--bg-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.home-text h1 span{
+    color: var(--main-color);
+}
+.home-text p{
+    font-size: 1rem;
+    color: var(--bg-color);
+    margin: 0.5rem 0 1.4rem;
+    font-weight: 600;
+}
+.btn{
+    padding: 10px 40px;
+    border-radius: 0.3rem;
+    background: var(--main-color);
+    color: var(--bg-color);
+    font-weight: 500;
+}
+.btn:hover{
+    background:#ff4500;
+}
+
+/*About us part*/
+.about{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(17rem,auto));
+    gap: 1.5rem;
+}
+.about-img img{
+    border-radius: 1.8rem;
+    background-color: #FB5B21;
+}
+.about-text h2{
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+.about-text p{
+    font-size: 0.938rem;
+    margin: 0.5rem 0 1.1rem;
+    line-height: 2rem;
+}
+
+/*customrt*/
+.customers-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,auto));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.customers-container .box{
+    padding: 20px;
+    box-shadow: var(--box-shadow);
+    border-radius: 1.5rem;
+    text-align: center;
+}
+
+.customers-container p{
+    font-size: 0.938rem;
+}
+
+.customers-container .box h2{
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0.5rem 0 0.5rem;
+}
+
+.customers-container .box img{
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.stars .bx{
+    color: var(--main-color);
+}
+
+.customers-container .box:hover{
+    background-color: var(--secondary-color);
+    transform: scale(105%);
+}
+
+/*Membershiop plans*/
+
+.Memberships{
+    background-color: var(--text-color);
+}
+.Memberships-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,auto));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+.Memberships .heading h1{
+    text-align: center;
+    padding-bottom: 2rem;
+    text-transform: uppercase;
+    font-size: 2rem;
+    color: var(--bg-color);
+}
+
+.Memberships-container .box{
+    padding: 40px;
+    box-shadow: var(--box-shadow);
+    background-color: var(--bg-color);
+    border-radius: 1rem;
+    text-align: center;
+}
+.Memberships-container .box h2{
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0.5rem 0 0.5rem;
+    text-transform: uppercase;
+    padding-bottom: 2rem;
+}
+
+.Memberships-container .box h3{
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0.5rem 0 0.5rem;
+    padding-bottom: 2rem;
+}
+
+.Memberships-container .box h3 span{
+    color: var(--main-color);
+    font-size: 2rem;
+}
+
+.Memberships-container .box li{
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0.5rem 0 0.5rem;
+    padding-bottom: 1rem;
+}
+
+.Memberships-container .box:hover{
+    background-color: var(--secondary-color);
+    transform: scale(105%);
+}
+
+.Memberships-container .box .btn{
+    color: var(--bg-color);
+}
+
+/*Being Body Builders*/
+.being-builder{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(17rem,auto));
+    background-color: var(--secondary-color);
+    
+}
+
+.being-builder .being-builder-img img{
+    width: 100%;
+    height: auto;
+}
+.being-builder .being-builder-text{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.being-builder .being-builder-text h1{
+    font-size: 6rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.being-builder .being-builder-text span{
+    color: var(--main-color);
+}
+.being-builder .being-builder-text .btn{
+    color: var(--text-color);
+}
+.being-builder .being-builder-text .btn:hover{
+    color: var(--bg-color);
+}
+
+/*Footer*/
+.footer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(240px,auto));
+    gap: 1.5rem;
+}
+.footer-box h3{
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.social{
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+}
+
+.social a .bx{
+    font-size: 24px;
+    color: var(--text-color);
+    padding: 10px;
+    background-color: var(--main-color);
+    border-radius: 0.2rem;
+}
+
+.social a .bx:hover{
+    background-color: var(--main-color);
+    color: var(--bg-color);
+}
+
+.footer-box li a{
+    color: var(--text-color);
+}
+.footer-box li a:hover{
+    color: var(--main-color);
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+}
+
+/*Footer*/
+
+footer{
+    background-color: var(--text-color);
+}
+footer .footer_text{
+    padding: 10px;
+    text-align: center;
+    color: var(--bg-color);
+}
+
+/*Animatio*/
+
+@keyframes hero{
+    0%,100%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(100px);
+    }
+}
+
+.home-img img{
+    animation: hero 5s infinite linear; /*infinite mean unstoppable*/
+}
+
+/*Resposiving website*/
+
+@media(max-width:1058px){
+    header{
+        padding: 16px 60px;
+    }
+    section{
+        padding: 50px 60px;
+    }
+
+    .home-text h1{
+        font-size: 2.4rem;
+    }
+}
+
+@media(max-width:991px){
+    header{
+        padding: 16px 4%;
+    }
+    section{
+        padding: 50px 4%;
+    }
+    .home-text h1{
+        font-size: 2rem;
+    }
+}
+
+@media(max-width:768px){
+    header{
+        padding: 12px 4%;
+    }
+    #menu-icon{
+        display: initial;/*showing the icon that was hidden*/
+    }
+    .navbar{
+        position: absolute;
+        top: -570px;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        background-color: var(--secondary-color);
+        row-gap: 1.4rem;
+        padding: 20px;
+        transition: 0.3s;
+        text-align: center;
+    }
+
+    .navbar a{
+        color: var(--text-color);
+    }
+
+    .navbar a:hover{
+        color: var(--bg-color);
+    }
+    .navbar.active{
+        top: 100%;
+    }
+    .about{
+        align-items: center;
+    }
+    .being-builder .being-builder-text h1{
+        font-size: 2rem;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+}
+
+@media(max-width:360px){
+    header{
+        padding: 11px 4%;
+    }
+    .logo img{
+        width: 45px;
+    }
+    .home-text{
+        padding-top: 45px;
+    }
+    .home-text h1{
+        font-size: 1.4rem;
+    }
+    .home-text p{
+        font-size: 0.8rem;
+        font-weight: 300;
+    }
+    .about-img{
+        order: 2;
+    }
+    .about-text{
+        text-align: center;
+    }
+    .about-text h2{
+        font-size: 1.2rem;
+    }
+    .heading h2{
+        font-size: 1.2rem;
+    }
+}
