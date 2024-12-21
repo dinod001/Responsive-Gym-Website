@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gym Edge.lk</title>
-    <link rel="stylesheet" href="services.css">
+    <link rel="stylesheet" href="signUp.css">
     <link rel="icon" href="img/logo.png">
     <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
     <link rel="stylesheet"href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">,<!--Externel icon from boxicons-->
@@ -40,98 +40,35 @@
 <!--Home-->
 <section class="home" id="home">
     <div class="home-text">
-        <h1>Our services</h1>
+        <h1>Sign UP</h1>
     </div>
 </section>
-
-<!--Classes-->
-<section class="classes" id="classes">
-    <div class="heading">
-        <h2>Our <span>Classes</span></h2>
-    </div>
-    <div class="classes-container">
-        <div class="box">
-            <img src="img/blog_01.jpg" alt="">
-            <div class="text-content">
-                <h1>Cycling</h1>
-                <h3>FRI</h3>
-                <p>8.AM TO 5.PM</p>
-                <h3>Coach</h3>
-                <p>John whick</p>
+<!--Sign up form-->
+<section class="sign-up">
+    <div class="form-container">
+        <form class="signup-form">
+            <h2>Create an Account</h2>
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
             </div>
-        </div>
-
-        <div class="box">
-            <div class="box">
-                <img src="img/blog_02.jpg" alt="">
-                <div class="text-content">
-                    <h1>Cycling</h1>
-                    <h3>FRI</h3>
-                    <p>8.AM TO 5.PM</p>
-                    <h3>Coach</h3>
-                    <p>John whick</p>
-                </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
             </div>
-        </div>
-
-        <div class="box">
-            <div class="box">
-                <img src="img/blog_03.jpg" alt="">
-                <div class="text-content">
-                    <h1>Cycling</h1>
-                    <h3>FRI</h3>
-                    <p>8.AM TO 5.PM</p>
-                    <h3>Coach</h3>
-                    <p>John whick</p>
-                </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Create a password" required>
             </div>
-        </div>
-    </div>
-</section>
-
-<!--Trainers-->
-<section class="trainers" id="trainers">
-    <div class="heading">
-        <h2>Our <span>Trainers</span></h2>
-    </div>
-    <div class="trainers-container">
-        <div class="box">
-            <img src="img/trainer.jpg" alt="">
-            <div class="text-content">
-                <p>Jenifer Alex</p>
-                <p>Fitness Trainer</p>
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
             </div>
-        </div>
-
-        <div class="box">
-            <div class="box">
-                <img src="img/trainer_2.jpg" alt="">
-                <div class="text-content">
-                    <p>Ellie Watson</p>
-                    <p>Fitness Trainer</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="box">
-            <div class="box">
-                <img src="img/trainer_3.jpg" alt="">
-                <div class="text-content">
-                    <p>Jecy Deoko</p>
-                    <p>Fitness Trainer</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="box">
-            <div class="box">
-                <img src="img/trainer_1.jpg" alt="">
-                <div class="text-content">
-                    <p>Anne walker</p>
-                    <p>Fitness Trainer</p>
-                </div>
-            </div>
-        </div>
+            <button type="submit" class="btn-submit">Sign Up</button>
+            <p class="login-text">
+                Already have an account? <a href="login.html">Login</a>
+            </p>
+        </form>
     </div>
 </section>
 

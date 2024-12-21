@@ -122,106 +122,91 @@ section{
     text-transform: uppercase;
     letter-spacing: 1px;
 }
-/*About us part*/
-.about{
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(17rem,auto));
-    gap: 1.5rem;
-}
-.about-text h1{
-    font-size: 1.8rem;
-    text-transform: uppercase;
-    border-bottom: 1px solid var(--main-color);
-}
-.about-text h1 span{
-    color: var(--main-color);
-}
-.about-text h2{
-    font-size: 1.3rem;
-    text-transform: uppercase;
-}
-.about-text p{
-    font-size: 0.938rem;
-    margin: 0.5rem 0 1.1rem;
-    line-height: 2rem;
-}
 
-/*why choose us*/
-section{
-    padding: 50px 100px;
-}
-.choose{
-    width: 100%;
-    min-height: auto;
-    background: url(img/choose-bag.jpg);
-    transform: scale(1,1);
-    background-repeat: no-repeat;
+/*Form*/
+.sign-up {
+    margin-top: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-size: cover;
-    margin-top: 60px;
 }
-
-.choose-text h1{
-    font-size: 2.4rem;
-    color: var(--bg-color);
+.form-container {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 30px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.signup-form h2 {
+    font-family: 'Open Sans';
+    color: var(--text-color);
     text-align: center;
-    padding-bottom: 30px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-.choose-text p{
-    font-size: 1rem;
-    color: var(--bg-color);
-    letter-spacing: 1px;
+    margin-bottom: 20px;
+    font-weight: 500;
 }
 
-/*customrt*/
-
-.customers .heading h2{
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 2rem;
-    padding: 40px;
-}
-.customers-container{
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(280px,auto));
-    gap: 1.5rem;
-    margin-top: 2rem;
+.form-group {
+    margin-bottom: 15px;
 }
 
-.customers-container .box{
-    padding: 20px;
-    box-shadow: var(--box-shadow);
-    border-radius: 1.5rem;
-    text-align: center;
+.form-group label {
+    font-size: 0.9em;
+    color: #666;
+    font-family: 'Open Sans';
+    margin-bottom: 5px;
+    display: block;
 }
 
-.customers-container p{
-    font-size: 0.938rem;
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
 }
 
-.customers-container .box h2{
-    font-size: 1.2rem;
+.form-group input:focus {
+    border-color: #fb5b21;
+    outline: none;
+}
+
+.btn-submit {
+    width: 100%;
+    background-color: #fb5b21;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
     font-weight: 600;
-    margin: 0.5rem 0 0.5rem;
+    transition: background-color 0.3s ease;
 }
 
-.customers-container .box img{
-    width: 70px;
-    height: 70px;
-    object-fit: cover;
-    border-radius: 50%;
+.btn-submit:hover {
+    background-color: #e0521f;
 }
-.stars .bx{
-    color: var(--main-color);
+.login-text {
+    font-family: 'Open Sans';
+    text-align: center;
+    margin-top: 15px;
+    font-size: 0.9em;
+    color: #666;
 }
 
-.customers-container .box:hover{
-    background-color: var(--secondary-color);
-    transform: scale(105%);
+.login-text a {
+    color: #fb5b21;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-text a:hover {
+    text-decoration: underline;
 }
 
 /*Footer*/
